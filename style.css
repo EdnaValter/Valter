@@ -99,7 +99,7 @@ section {
 }
 
 .hero {
-    background: var(--color-primary);
+    background: linear-gradient(135deg, #0e74ff, #003396);
     color: var(--color-light);
     padding: var(--spacing-lg) 0;
 }
@@ -121,8 +121,20 @@ section {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: var(--spacing-sm);
+}
+
+.hero .lead {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    max-width: 500px;
+}
+
+.hero-btns {
+    margin-top: var(--spacing-sm);
+    display: flex;
+    gap: var(--spacing-sm);
 }
 
 .small-hero {
@@ -162,6 +174,32 @@ section {
     padding: var(--spacing-sm);
     border-radius: 4px;
     text-align: center;
+}
+
+/* Features grid on the home page */
+.features {
+    background: var(--color-light);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.feature-item {
+    background: var(--color-bg);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feature-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .newsletter {
@@ -260,6 +298,12 @@ section {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+/* Section used for simple text highlights */
+.highlight {
+    background: var(--color-bg);
+    padding: var(--spacing-md) 0;
 }
 
 .scroll-btn {

@@ -5,10 +5,11 @@
 }
 
 :root {
-    --color-primary: #f5b700;
-    --color-dark: #333;
+    /* Palette inspired by thecodest.co */
+    --color-primary: #ff6b00;
+    --color-dark: #2d3246;
     --color-light: #ffffff;
-    --color-bg: #f9f9f9;
+    --color-bg: #edf1f7;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
@@ -20,6 +21,13 @@ body {
     line-height: 1.6;
     color: var(--color-dark);
     background-color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 .container {
@@ -29,8 +37,8 @@ body {
 }
 
 .site-header {
-    background-color: #fff5d1;
-    border-bottom: 1px solid #f1e6a8;
+    background-color: #ffe6cc;
+    border-bottom: 1px solid #ffcc99;
 }
 
 .header-inner {
@@ -79,7 +87,7 @@ body {
 }
 
 .hero {
-    background: #ffe082;
+    background: #ffd4b3;
     padding: var(--spacing-lg) 0;
 }
 
@@ -138,13 +146,14 @@ body {
 }
 
 .newsletter {
-    background: #fff5d1;
+    background: #ffe6cc;
     padding: var(--spacing-md) 0;
     text-align: center;
 }
 
 .site-footer {
-    background: #f0f0f0;
+    background: var(--color-dark);
+    color: var(--color-light);
     padding: 1rem 0;
     text-align: center;
     margin-top: 2rem;

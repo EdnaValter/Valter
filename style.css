@@ -221,6 +221,11 @@ section {
     list-style: disc;
 }
 
+/* Remove extra space at the end of cards */
+.service-item > *:last-child {
+    margin-bottom: 0;
+}
+
 /* Features grid on the home page */
 .features {
     background: var(--color-light);

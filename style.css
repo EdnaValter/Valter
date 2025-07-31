@@ -365,6 +365,45 @@ section {
     right: -2rem;
 }
 
+/* About page sections */
+.about-section {
+    padding: var(--spacing-md) 0;
+}
+
+.about-section:nth-of-type(even) {
+    background: var(--color-bg);
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.profile {
+    margin-bottom: var(--spacing-md);
+}
+
+.profile h3 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.profile ul {
+    margin-left: 1.2rem;
+    list-style: disc;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: var(--spacing-sm);
+}
+
+.social-links a {
+    margin: 0 var(--spacing-xs);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
 @media (max-width: 768px) {
     .hero-inner {
         flex-direction: column;

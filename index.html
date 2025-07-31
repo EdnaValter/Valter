@@ -9,9 +9,10 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="container">
+        <div class="container header-inner">
             <a href="index.html" class="logo">Valter</a>
-            <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav class="site-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -25,10 +26,15 @@
 
     <main>
         <section class="hero">
-            <div class="container">
-                <h1>Welcome to Valter</h1>
-                <p>Your partner in web development education and collaboration.</p>
-                <a href="contact.html" class="btn-primary">Contact Us</a>
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1>Welcome to Valter</h1>
+                    <p>Your partner in web development education and collaboration.</p>
+                    <a href="contact.html" class="btn-primary">Contact Us</a>
+                </div>
+                <div class="hero-media">
+                    <img src="https://source.unsplash.com/800x600/?coding" alt="Software illustration">
+                </div>
             </div>
         </section>
 
@@ -56,6 +62,8 @@
                 </form>
             </div>
         </section>
+
+
     </main>
 
     <footer class="site-footer">
@@ -63,5 +71,7 @@
             <p>&copy; 2024 Valter</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

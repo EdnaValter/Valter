@@ -19,7 +19,7 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: var(--color-dark);
+    color: var(--color-light);
     background-color: #001f3f;
     display: flex;
     flex-direction: column;
@@ -88,6 +88,7 @@ main {
 
 .hero {
     background: #ffd4b3;
+    color: var(--color-dark);
     padding: var(--spacing-lg) 0;
 }
 
@@ -140,6 +141,7 @@ main {
 
 .service-item {
     background: var(--color-bg);
+    color: var(--color-dark);
     padding: var(--spacing-sm);
     border-radius: 4px;
     text-align: center;
@@ -147,6 +149,7 @@ main {
 
 .newsletter {
     background: #ffe6cc;
+    color: var(--color-dark);
     padding: var(--spacing-md) 0;
     text-align: center;
 }
@@ -171,6 +174,7 @@ main {
     padding: var(--spacing-xs);
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: var(--color-dark);
 }
 
 .contact-info p {

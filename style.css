@@ -285,11 +285,43 @@ section {
     margin-top: 2rem;
 }
 
+.support-intro {
+    background: var(--color-light);
+    text-align: center;
+    padding: var(--spacing-md) 0;
+}
+
+.support-options {
+    list-style: none;
+    margin-top: var(--spacing-sm);
+    padding: 0;
+}
+
+.support-options li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-form .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .contact-form .container {
+        grid-template-columns: 1fr;
+    }
+}
+
 .contact-form form {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
     margin-bottom: var(--spacing-md);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-form input,
@@ -298,10 +330,21 @@ section {
     border: 1px solid #ccc;
     border-radius: 4px;
     color: var(--color-dark);
+    width: 100%;
+}
+
+.contact-form textarea {
+    min-height: 120px;
 }
 
 .contact-info p {
     margin-bottom: var(--spacing-xs);
+}
+
+.contact-info {
+    background: var(--color-bg);
+    padding: var(--spacing-sm);
+    border-radius: 4px;
 }
 
 /* Testimonials horizontal scroller */

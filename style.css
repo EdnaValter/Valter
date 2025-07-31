@@ -7,7 +7,7 @@
 :root {
     /* Palette inspired by thecodest.co */
     --color-primary: #ff6b00;
-    --color-dark: #2d3246;
+    --color-dark: #001f3f;
     --color-light: #ffffff;
     --color-bg: #edf1f7;
     --spacing-xs: 0.5rem;
@@ -20,7 +20,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--color-light);
-    background-color: #001f3f;
+    background-color: var(--color-dark);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -36,9 +36,18 @@ main {
     margin: 0 auto;
 }
 
+section {
+    padding: var(--spacing-md) 0;
+}
+
+::selection {
+    background: var(--color-primary);
+    color: var(--color-light);
+}
+
 .site-header {
-    background-color: #ffe6cc;
-    border-bottom: 1px solid #ffcc99;
+    background-color: var(--color-dark);
+    border-bottom: 1px solid var(--color-primary);
 }
 
 .header-inner {
@@ -61,6 +70,7 @@ main {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--color-light);
 }
 
 .site-nav {
@@ -75,7 +85,7 @@ main {
 
 .nav-list li a {
     text-decoration: none;
-    color: var(--color-dark);
+    color: var(--color-light);
     font-weight: 600;
 }
 

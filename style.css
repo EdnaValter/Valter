@@ -16,11 +16,16 @@
     --spacing-lg: 4rem;
 }
 
+::selection {
+    background: var(--color-primary);
+    color: var(--color-light);
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: var(--color-light);
-    background-color: #001f3f;
+    color: var(--color-dark);
+    background-color: var(--color-bg);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -30,6 +35,10 @@ main {
     flex: 1;
 }
 
+section {
+    padding: var(--spacing-md) 0;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -37,8 +46,9 @@ main {
 }
 
 .site-header {
-    background-color: #ffe6cc;
-    border-bottom: 1px solid #ffcc99;
+    background: var(--color-dark);
+    border-bottom: none;
+    color: var(--color-light);
 }
 
 .header-inner {
@@ -51,7 +61,7 @@ main {
 .site-header .logo {
     font-weight: 600;
     font-size: 1.5rem;
-    color: var(--color-primary);
+    color: var(--color-light);
     text-decoration: none;
 }
 
@@ -61,6 +71,7 @@ main {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--color-light);
 }
 
 .site-nav {
@@ -75,7 +86,7 @@ main {
 
 .nav-list li a {
     text-decoration: none;
-    color: var(--color-dark);
+    color: var(--color-light);
     font-weight: 600;
 }
 
@@ -87,8 +98,8 @@ main {
 }
 
 .hero {
-    background: #ffd4b3;
-    color: var(--color-dark);
+    background: var(--color-primary);
+    color: var(--color-light);
     padding: var(--spacing-lg) 0;
 }
 
@@ -148,8 +159,8 @@ main {
 }
 
 .newsletter {
-    background: #ffe6cc;
-    color: var(--color-dark);
+    background: var(--color-primary);
+    color: var(--color-light);
     padding: var(--spacing-md) 0;
     text-align: center;
 }

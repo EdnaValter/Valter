@@ -47,4 +47,16 @@ window.addEventListener('DOMContentLoaded', () => {
       showMessage(newsletterForm, 'Thanks for signing up!');
     });
   }
+
+  const testimonialScroller = document.querySelector('.testimonial-scroller');
+  const btnPrev = document.querySelector('.scroll-btn.left');
+  const btnNext = document.querySelector('.scroll-btn.right');
+  if (testimonialScroller && btnPrev && btnNext) {
+    btnPrev.addEventListener('click', () => {
+      testimonialScroller.scrollBy({ left: -testimonialScroller.clientWidth, behavior: 'smooth' });
+    });
+    btnNext.addEventListener('click', () => {
+      testimonialScroller.scrollBy({ left: testimonialScroller.clientWidth, behavior: 'smooth' });
+    });
+  }
 });

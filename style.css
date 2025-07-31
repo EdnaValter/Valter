@@ -221,6 +221,67 @@ section {
     margin-bottom: var(--spacing-xs);
 }
 
+/* Testimonials horizontal scroller */
+.testimonials {
+    background: var(--color-bg);
+}
+
+.testimonial-wrapper {
+    position: relative;
+    margin-top: var(--spacing-sm);
+}
+
+.testimonial-scroller {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--spacing-sm);
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--spacing-sm);
+}
+
+.testimonial-card {
+    flex: 0 0 250px;
+    background: var(--color-light);
+    color: var(--color-dark);
+    padding: var(--spacing-sm);
+    border-radius: 4px;
+    scroll-snap-align: start;
+}
+
+.testimonial-card .author {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-xs);
+    font-weight: 600;
+    gap: var(--spacing-xs);
+}
+
+.testimonial-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-dark);
+    color: var(--color-light);
+    border: none;
+    padding: var(--spacing-xs);
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.scroll-btn.left {
+    left: -2rem;
+}
+
+.scroll-btn.right {
+    right: -2rem;
+}
+
 @media (max-width: 768px) {
     .hero-inner {
         flex-direction: column;

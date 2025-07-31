@@ -62,8 +62,12 @@ section {
 .site-header .logo {
     font-weight: 600;
     font-size: 1.5rem;
-    color: var(--color-light);
     text-decoration: none;
+    background: linear-gradient(45deg, #ffffff, #4a90e2, #ff6b00);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: logo-shift 6s linear infinite, logo-float 3s ease-in-out infinite;
 }
 
 .nav-toggle {
@@ -99,7 +103,9 @@ section {
 }
 
 .hero {
-    background: linear-gradient(135deg, #0e74ff, #003396);
+    background: linear-gradient(135deg, #0e74ff, #003396, #4a90e2);
+    background-size: 400% 400%;
+    animation: hero-gradient 12s ease infinite;
     color: var(--color-light);
     padding: var(--spacing-lg) 0;
 }
@@ -118,23 +124,35 @@ section {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    animation: float 6s ease-in-out infinite;
+}
+
+
+.hero h1,
+.hero .lead,
+.hero-btns {
+    opacity: 0;
+    animation: fade-slide 1s forwards;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: var(--spacing-sm);
+    animation-delay: 0.2s;
 }
 
 .hero .lead {
     font-size: 1.25rem;
     margin-bottom: var(--spacing-sm);
     max-width: 500px;
+    animation-delay: 0.4s;
 }
 
 .hero-btns {
     margin-top: var(--spacing-sm);
     display: flex;
     gap: var(--spacing-sm);
+    animation-delay: 0.6s;
 }
 
 .small-hero {
@@ -364,7 +382,33 @@ section {
         display: flex;
     }
 
-    .nav-toggle {
-        display: block;
-    }
+  .nav-toggle {
+      display: block;
+  }
+}
+
+@keyframes logo-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes logo-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+@keyframes hero-gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fade-slide {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }

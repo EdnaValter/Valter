@@ -6,7 +6,8 @@
 
 :root {
     /* Palette inspired by thecodest.co */
-    --color-primary: #ff6b00;
+    --color-primary: #4a90e2; /* new accent color */
+    --color-cta: #ff6b00;    /* bright orange reserved for key CTAs */
     --color-dark: #2d3246;
     --color-light: #ffffff;
     --color-bg: #edf1f7;
@@ -92,7 +93,7 @@ section {
 
 .nav-list .cta {
     color: var(--color-light);
-    background: var(--color-primary);
+    background: var(--color-cta);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 4px;
 }
@@ -137,6 +138,11 @@ section {
     text-decoration: none;
     font-weight: 600;
     margin-top: var(--spacing-sm);
+}
+
+/* Bright orange used only for key call-to-actions */
+.btn-cta {
+    background: var(--color-cta);
 }
 
 .page-intro {

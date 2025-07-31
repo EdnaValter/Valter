@@ -19,8 +19,8 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: var(--color-dark);
-    background-color: var(--color-light);
+    color: var(--color-light);
+    background-color: #0d1b2a;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -89,6 +89,7 @@ main {
 .hero {
     background: #ffd4b3;
     padding: var(--spacing-lg) 0;
+    color: var(--color-dark);
 }
 
 .hero-inner {
@@ -143,12 +144,14 @@ main {
     padding: var(--spacing-sm);
     border-radius: 4px;
     text-align: center;
+    color: var(--color-dark);
 }
 
 .newsletter {
     background: #ffe6cc;
     padding: var(--spacing-md) 0;
     text-align: center;
+    color: var(--color-dark);
 }
 
 .site-footer {

@@ -194,6 +194,13 @@ section {
     text-align: center;
 }
 
+.service-item ul {
+    margin: var(--spacing-sm) 0;
+    list-style: disc;
+    margin-left: 1.2rem;
+    text-align: left;
+}
+
 /* Features grid on the home page */
 .features {
     background: var(--color-light);

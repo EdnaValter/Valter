@@ -154,6 +154,29 @@ main {
     text-align: center;
 }
 
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+}
+
+.newsletter input {
+    padding: var(--spacing-xs);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: var(--color-dark);
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-message {
+    margin-top: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
 .site-footer {
     background: var(--color-dark);
     color: var(--color-light);

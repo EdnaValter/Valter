@@ -26,6 +26,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--color-dark);
+    width: 100%;
     background-color: var(--color-bg);
     display: flex;
     flex-direction: column;
@@ -189,6 +190,7 @@ section {
 .service-item {
     background: var(--color-bg);
     color: var(--color-dark);
+    width: 100%;
     padding: var(--spacing-sm);
     border-radius: 4px;
     text-align: center;
@@ -241,6 +243,7 @@ section {
     border-radius: 4px;
     color: var(--color-dark);
     width: 100%;
+    width: 100%;
     max-width: 300px;
 }
 
@@ -248,6 +251,7 @@ section {
     margin-top: var(--spacing-xs);
     font-weight: 600;
     color: var(--color-dark);
+    width: 100%;
 }
 
 .site-footer {
@@ -263,6 +267,8 @@ section {
     flex-direction: column;
     gap: var(--spacing-xs);
     margin-bottom: var(--spacing-md);
+    flex: 1 1 320px;
+    max-width: 400px;
 }
 
 .contact-form input,
@@ -271,6 +277,7 @@ section {
     border: 1px solid #ccc;
     border-radius: 4px;
     color: var(--color-dark);
+    width: 100%;
 }
 
 .contact-info p {
@@ -281,6 +288,34 @@ section {
 .testimonials {
     background: var(--color-bg);
 }
+.contact-intro {
+    background: var(--color-light);
+    text-align: center;
+    padding: var(--spacing-md) 0;
+}
+
+.contact-intro p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+
+.contact-form .contact-info {
+    max-width: 400px;
+    flex: 1 1 250px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 6rem;
+}
+
 
 .testimonial-wrapper {
     position: relative;
@@ -303,6 +338,7 @@ section {
     flex: 0 0 280px;
     background: var(--color-light);
     color: var(--color-dark);
+    width: 100%;
     padding: var(--spacing-md);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);

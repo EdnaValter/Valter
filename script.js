@@ -26,14 +26,25 @@ window.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
-      storeData('contacts', {
+      const data = {
         name: contactForm.name.value,
         email: contactForm.email.value,
         message: contactForm.message.value,
-        ts: Date.now()
-      });
-      contactForm.reset();
-      showMessage(contactForm, 'Message sent! We will be in touch soon.');
+      };
+      storeData('contacts', { ...data, ts: Date.now() });
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+        .then(res => (res.ok ? res.json() : Promise.reject()))
+        .then(() => {
+          contactForm.reset();
+          showMessage(contactForm, 'Message sent! We will be in touch soon.');
+        })
+        .catch(() => {
+          showMessage(contactForm, 'Error sending message. Please try again later.');
+        });
     });
   }
 
@@ -42,9 +53,21 @@ window.addEventListener('DOMContentLoaded', () => {
     const emailInput = newsletterForm.querySelector('input[type="email"]');
     newsletterForm.addEventListener('submit', e => {
       e.preventDefault();
-      storeData('signups', { email: emailInput.value, ts: Date.now() });
-      newsletterForm.reset();
-      showMessage(newsletterForm, 'Thanks for signing up!');
+      const data = { email: emailInput.value };
+      storeData('signups', { ...data, ts: Date.now() });
+      fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+        .then(res => (res.ok ? res.json() : Promise.reject()))
+        .then(() => {
+          newsletterForm.reset();
+          showMessage(newsletterForm, 'Thanks for signing up!');
+        })
+        .catch(() => {
+          showMessage(newsletterForm, 'Error signing up. Please try again later.');
+        });
     });
   }
 

@@ -1,7 +1,19 @@
 <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#edf1f7"/>
-  <circle cx="300" cy="280" r="70" fill="#4a90e2"/>
-  <circle cx="500" cy="280" r="70" fill="#4a90e2"/>
-  <rect x="260" y="350" width="80" height="160" fill="#4a90e2"/>
-  <rect x="460" y="350" width="80" height="160" fill="#4a90e2"/>
+  <defs>
+    <linearGradient id="aboutGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#edf1f7"/>
+      <stop offset="100%" stop-color="#d0dbff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#aboutGrad)"/>
+  <g fill="#4a90e2">
+    <circle cx="300" cy="260" r="70"/>
+    <circle cx="500" cy="260" r="70"/>
+    <rect x="260" y="330" width="80" height="170" rx="10"/>
+    <rect x="460" y="330" width="80" height="170" rx="10"/>
+  </g>
+  <g fill="#fff" stroke="#4a90e2" stroke-width="6" stroke-linecap="round">
+    <path d="M270 400h60"/>
+    <path d="M470 400h60"/>
+  </g>
 </svg>

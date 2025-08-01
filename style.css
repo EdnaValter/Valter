@@ -375,7 +375,7 @@ section {
     overflow-x: auto;
     gap: var(--spacing-sm);
     scroll-snap-type: x mandatory;
-    padding-bottom: var(--spacing-sm);
+    padding: 0 3rem var(--spacing-sm);
     scrollbar-width: none;
 }
 .testimonial-scroller::-webkit-scrollbar {

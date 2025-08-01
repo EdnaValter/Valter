@@ -37,7 +37,7 @@ main {
 }
 
 section {
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-lg) 0;
 }
 
 .container {
@@ -234,21 +234,22 @@ section {
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-md);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
 }
 
 .feature-item {
     background: var(--color-bg);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .feature-item img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
+    margin-top: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -360,6 +361,8 @@ section {
 .testimonial-wrapper {
     position: relative;
     margin-top: var(--spacing-sm);
+    display: flex;
+    align-items: center;
 }
 
 .testimonial-scroller {
@@ -433,11 +436,11 @@ section {
 }
 
 .scroll-btn.left {
-    left: -2rem;
+    left: 0;
 }
 
 .scroll-btn.right {
-    right: -2rem;
+    right: 0;
 }
 
 /* About page sections */

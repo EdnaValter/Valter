@@ -376,6 +376,8 @@ section {
     gap: var(--spacing-sm);
     scroll-snap-type: x mandatory;
     padding-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
     scrollbar-width: none;
 }
 .testimonial-scroller::-webkit-scrollbar {

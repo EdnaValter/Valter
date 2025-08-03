@@ -14,6 +14,15 @@
       @keyframes dash {
         to { stroke-dashoffset: -24; }
       }
+
+      .node {
+        animation: dot-color 4s linear infinite;
+      }
+
+      @keyframes dot-color {
+        0%, 100% { fill: #fff; }
+        10%, 20% { fill: #ff6b00; }
+      }
     </style>
   </defs>
   <rect width="800" height="600" fill="url(#bg)"/>
@@ -23,22 +32,22 @@
     <polyline class="moving-line" points="180,450 300,420 420,480 520,430 640,470"/>
   </g>
   <g opacity="0.9">
-    <use href="#node" x="150" y="150"/>
-    <use href="#node" x="250" y="100"/>
-    <use href="#node" x="350" y="180"/>
-    <use href="#node" x="450" y="120"/>
-    <use href="#node" x="550" y="170"/>
+    <use class="node" href="#node" x="150" y="150" style="animation-delay:0s"/>
+    <use class="node" href="#node" x="250" y="100" style="animation-delay:0.25s"/>
+    <use class="node" href="#node" x="350" y="180" style="animation-delay:0.5s"/>
+    <use class="node" href="#node" x="450" y="120" style="animation-delay:0.75s"/>
+    <use class="node" href="#node" x="550" y="170" style="animation-delay:1s"/>
 
-    <use href="#node" x="200" y="300"/>
-    <use href="#node" x="300" y="260"/>
-    <use href="#node" x="400" y="330"/>
-    <use href="#node" x="500" y="280"/>
-    <use href="#node" x="600" y="340"/>
+    <use class="node" href="#node" x="200" y="300" style="animation-delay:1.25s"/>
+    <use class="node" href="#node" x="300" y="260" style="animation-delay:1.5s"/>
+    <use class="node" href="#node" x="400" y="330" style="animation-delay:1.75s"/>
+    <use class="node" href="#node" x="500" y="280" style="animation-delay:2s"/>
+    <use class="node" href="#node" x="600" y="340" style="animation-delay:2.25s"/>
 
-    <use href="#node" x="180" y="450"/>
-    <use href="#node" x="300" y="420"/>
-    <use href="#node" x="420" y="480"/>
-    <use href="#node" x="520" y="430"/>
-    <use href="#node" x="640" y="470"/>
+    <use class="node" href="#node" x="180" y="450" style="animation-delay:2.5s"/>
+    <use class="node" href="#node" x="300" y="420" style="animation-delay:2.75s"/>
+    <use class="node" href="#node" x="420" y="480" style="animation-delay:3s"/>
+    <use class="node" href="#node" x="520" y="430" style="animation-delay:3.25s"/>
+    <use class="node" href="#node" x="640" y="470" style="animation-delay:3.5s"/>
   </g>
 </svg>

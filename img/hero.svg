@@ -5,12 +5,22 @@
       <stop offset="100%" stop-color="#003396"/>
     </linearGradient>
     <circle id="node" cx="0" cy="0" r="6" fill="#fff"/>
+    <style>
+      .moving-line {
+        stroke-dasharray: 12 12;
+        animation: dash 4s linear infinite;
+      }
+
+      @keyframes dash {
+        to { stroke-dashoffset: -24; }
+      }
+    </style>
   </defs>
   <rect width="800" height="600" fill="url(#bg)"/>
   <g opacity="0.6" stroke="#fff" stroke-width="2" fill="none">
-    <polyline points="150,150 250,100 350,180 450,120 550,170"/>
-    <polyline points="200,300 300,260 400,330 500,280 600,340"/>
-    <polyline points="180,450 300,420 420,480 520,430 640,470"/>
+    <polyline class="moving-line" points="150,150 250,100 350,180 450,120 550,170"/>
+    <polyline class="moving-line" points="200,300 300,260 400,330 500,280 600,340"/>
+    <polyline class="moving-line" points="180,450 300,420 420,480 520,430 640,470"/>
   </g>
   <g opacity="0.9">
     <use href="#node" x="150" y="150"/>

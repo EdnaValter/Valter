@@ -4,10 +4,16 @@
       <stop offset="0%" stop-color="#0e74ff"/>
       <stop offset="100%" stop-color="#003396"/>
     </linearGradient>
+    <linearGradient id="lineGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="120" y2="0" spreadMethod="repeat">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#ff6b00"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
     <circle id="node" cx="0" cy="0" r="6" fill="#fff"/>
     <style>
       .moving-line {
         stroke-dasharray: 12 12;
+        stroke-linecap: round;
         animation: dash 4s linear infinite;
       }
 
@@ -17,7 +23,7 @@
     </style>
   </defs>
   <rect width="800" height="600" fill="url(#bg)"/>
-  <g opacity="0.6" stroke="#fff" stroke-width="2" fill="none">
+  <g opacity="0.6" stroke="url(#lineGradient)" stroke-width="2" fill="none">
     <polyline class="moving-line" points="150,150 250,100 350,180 450,120 550,170"/>
     <polyline class="moving-line" points="200,300 300,260 400,330 500,280 600,340"/>
     <polyline class="moving-line" points="180,450 300,420 420,480 520,430 640,470"/>
